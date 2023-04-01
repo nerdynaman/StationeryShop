@@ -40,6 +40,8 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // add Axios
+    '@nuxtjs/axios'
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -63,5 +65,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+    baseURL: 'http://localhost:8000/api'
+  },
 }
