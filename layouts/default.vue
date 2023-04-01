@@ -32,6 +32,13 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>{{ title }}</v-toolbar-title>
       <v-spacer />
+      <!-- login button -->
+      <v-btn
+        v-if="!auth.loggedIn"
+        color="primary"
+      >
+        Login
+      </v-btn>
     </v-app-bar>
     <v-main>
       <v-container>
@@ -55,6 +62,9 @@ export default {
       clipped: false,
       drawer: true,
       fixed: true,
+      auth: {
+        loggedIn: false
+      },
       items: [
         {
           icon: 'mdi-apps',
