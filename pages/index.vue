@@ -1,4 +1,3 @@
-<!-- Write a front page for a stationary store with options for login, cart, items, catgories and offers, which can be linked with django-->
 <template>
   <v-container>
       <v-row>
