@@ -59,9 +59,11 @@ class Product(models.Model):
     tag1 = models.ForeignKey('Tag', on_delete=models.CASCADE, related_name='tag1', null=True)
     tag2 = models.ForeignKey('Tag', on_delete=models.CASCADE, related_name='tag2', null=True)
     tag3 = models.ForeignKey('Tag', on_delete=models.CASCADE, related_name='tag3', null=True)
-    
+    product_image = models.CharField(max_length=1024, default="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.co") 
     def __str__(self):
         return self.name
+        
+        
     
 class Category(models.Model):
     CategoryID = models.AutoField(primary_key=True)
